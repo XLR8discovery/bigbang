@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   lint:
-    if: github.repository == 'ipfs/kubo' || github.event_name == 'workflow_dispatch'
+    if: github.repository == 'XLR8discovery/bigbang' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -31,11 +31,11 @@ jobs:
           format: tty
 
   build:
-    if: github.repository == 'ipfs/kubo' || github.event_name == 'workflow_dispatch'
+    if: github.repository == 'XLR8discovery/bigbang' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      IMAGE_NAME: ipfs/kubo
+      IMAGE_NAME: XLR8discovery/bigbang
       WIP_IMAGE_TAG: wip
     defaults:
       run:
